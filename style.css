@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 50px 0;
+    font-size: 80px;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+section div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 225px;
+    width: 225px;
+}
+
+section div div {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: 0.4s ease-in-out all;
+}
+
+i {
+    font-size: 120px;
+    color: #fff;
+    transition: 0.4s ease-in-out all;
+}
+
+.user-rock:hover,
+.user-paper:hover,
+.user-scissors:hover {
+    height: 225px;
+    width: 225px;
+}
+
+.user-rock:hover .fa-hand-back-fist,
+.user-paper:hover .fa-hand,
+.user-scissors:hover .fa-hand-scissors {
+    font-size: 140px;
+}
+
+.container-rock {
+    background-color: #ff9a68;
+}
+
+.container-paper {
+    background-color: #019ee6;
+}
+
+.container-scissors {
+    background-color: #fbca03;
+}
