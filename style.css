@@ -1,32 +1,55 @@
 body {
+    display: flex;
     margin: 0;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/pxfuel.jpg');
+    color: #fff;
+}
+
+main {
+    background-color: #28b4e5;
+    border-radius: 50px;
+    padding-bottom: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 50px 0;
+    padding: 50px 30px;
     font-size: 80px;
     margin: 0;
 }
 
-main {
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    position: relative;
 }
 
-section {
+.container-pc {
+    padding-bottom: 25px;
+}
+
+.container-user {
+    padding-top: 25px;
+}
+
+.container-pc,
+.container-user {
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 50px;
 }
 
-section div {
+.container-pc div,
+.container-user div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +57,8 @@ section div {
     width: 225px;
 }
 
-section div div {
+.container-pc div div,
+.container-user div div {
     height: 200px;
     width: 200px;
     display: flex;
@@ -42,8 +66,11 @@ section div div {
     justify-content: center;
     border-radius: 50px;
     border: 2px solid #000;
-    cursor: pointer;
     transition: 0.4s ease-in-out all;
+}
+
+.container-user div div {
+    cursor: pointer;
 }
 
 i {
@@ -75,4 +102,84 @@ i {
 
 .container-scissors {
     background-color: #fbca03;
+}
+
+.container-vs {
+    position: absolute;
+}
+
+.versus {
+    opacity: 0.9;
+}
+
+h3 {
+    font-size: 40px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+label {
+    font-size: 25px;
+}
+
+#name {
+    width: 300px;
+    padding: 10px;
+}
+
+@media (max-width: 810px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .container-pc,
+    .container-user {
+        column-gap: 5px;
+    }
+
+    .container-pc div,
+    .container-user div {
+        height: 115px;
+        width: 115px;
+    }
+
+    .container-pc div div,
+    .container-user div div {
+        height: 90px;
+        width: 90px;
+        border-radius: 20px;
+    }
+
+    i {
+        font-size: 30px;
+    }
+
+    .user-rock:hover,
+    .user-paper:hover,
+    .user-scissors:hover {
+        height: 115px;
+        width: 115px;
+    }
+
+    .user-rock:hover .fa-hand-back-fist,
+    .user-paper:hover .fa-hand,
+    .user-scissors:hover .fa-hand-scissors {
+        font-size: 40px;
+    }
+
+    #name {
+        width: 200px;
+    }
+
+    .versus {
+        width: 100px;
+    }
+
+    .container-vs {
+        top: 150px;
+    }
 }
