@@ -14,7 +14,6 @@ input.addEventListener('keydown', (e) => {
     if(e.key === 'Enter') {
         const name = input.value
         username.textContent = name
-
         label.remove()
         input.remove()
     }
